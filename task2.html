@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniStore</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+    <style>
+        .hero-section {
+            background-color: #eef4f6;
+            min-height: 400px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.4rem, 6vw, 6rem);
+            letter-spacing: 2px;
+            color: #222;
+        }
+
+        .hero-watch {
+            transform: translateX(10%);
+        }
+
+        @media (max-width: 991px) {
+            .hero-watch {
+                transform: none;
+                max-width: 300px;
+                margin: auto;
+            }
+        }
+
+        .card-img-top {
+            background-color: #f7f7f7;
+        }
+
+        .new-year-sale {
+            background-color: #eef4f6;
+        }
+
+        .post-card-img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .footer-link {
+            text-decoration: none;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<!-- navbar -->
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">MiniStore<span class="text-primary">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">PRODUCTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">WATCHES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SALE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 ms-3F">
+                <i class="bi bi-search fs-5"></i>
+                <i class="bi bi-person fs-5"></i>
+                <i class="bi bi-cart fs-5"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <!-- 1 -->
+            <div class="carousel-item active">
+                <section class="hero-section d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h1 class="display-1 fw-light lh-1 hero-title">
+                                    YOUR PRODUCTS<br>ARE GREAT.
+                                </h1>
+                                <a href="#" class="btn btn-dark btn-lg mt-4 px-4">SHOP PRODUCT</a>
+                            </div>
+
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <img src="./img/banner-image.png" class="img-fluid hero-watch" style="max-width:420px;">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 2 -->
+            <div class="carousel-item">
+                <section class="hero-section d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h1 class="display-1 fw-light lh-1 hero-title">
+                                    YOUR PRODUCTS<br>ARE GREAT.
+                                </h1>
+                                <a href="#" class="btn btn-dark btn-lg mt-4 px-4">SHOP PRODUCT</a>
+                            </div>
+
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <img src="./img/banner-image.png" class="img-fluid hero-watch" style="max-width:420px;">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 3 -->
+            <div class="carousel-item">
+                <section class="hero-section d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h1 class="display-1 fw-light lh-1 hero-title">
+                                    YOUR PRODUCTS<br>ARE GREAT.
+                                </h1>
+                                <a href="#" class="btn btn-dark btn-lg mt-4 px-4">SHOP PRODUCT</a>
+                            </div>
+
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <img src="./img/banner-image.png" class="img-fluid hero-watch" style="max-width:420px;">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+        </button>
+
+    </div>
+
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center text-md-start gy-4">
+
+                <div class="col-md-3 d-flex">
+                    <div class="me-3 fs-3 text-info">
+                        <i class="bi bi-truck"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">FREE DELIVERY</h5>
+                        <p class="text-muted mb-0">Consectetur adipis elit lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 d-flex">
+                    <div class="me-3 fs-3 text-info">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">QUALITY GUARANTEE</h5>
+                        <p class="text-muted mb-0">Dolor sit amet orem ipsu mcons ectetur adipis elit.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 d-flex">
+                    <div class="me-3 fs-3 text-info">
+                        <i class="bi bi-tag"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">DAILY OFFERS</h5>
+                        <p class="text-muted mb-0">Amet consectetur adipis elit loreme ipsum dolor sit.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 d-flex">
+                    <div class="me-3 fs-3 text-info">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">100% SECURE PAYMENT</h5>
+                        <p class="text-muted mb-0">Rem Lopsum dolor sit amet, consectetur adipis elit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- mobile -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="fw-bold mb-4">MOBILE PRODUCTS</h3>
+            <div id="mobileProductsSlider" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/cart-item1.jpg" class="card-img-top p-4" alt="iPhone 11">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">IPHONE 11</h6>
+                                        <p class="card-text text-muted mb-1">$900</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/cart-item1.jpg" class="card-img-top p-4" alt="iPhone 12">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">IPHONE 12</h6>
+                                        <p class="card-text text-muted mb-1">$950</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/insta-item1.jpg" class="card-img-top p-4" alt="iPhone 9">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">IPHONE 9</h6>
+                                        <p class="card-text text-muted mb-1">$750</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/insta-item1.jpg" class="card-img-top p-4" alt="iPhone 10">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">IPHONE 10</h6>
+                                        <p class="card-text text-muted mb-1">$750</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/single-image1.png" class="card-img-top p-4" alt="iPhone 13">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">IPHONE 13</h6>
+                                        <p class="card-text text-muted mb-1">$1100</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/insta-item3.jpg" class="card-img-top p-4" alt="iPhone 14">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">IPHONE 14</h6>
+                                        <p class="card-text text-muted mb-1">$1200</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/insta-item1.jpg" class="card-img-top p-4" alt="iPhone SE">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">IPHONE SE</h6>
+                                        <p class="card-text text-muted mb-1">$500</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/insta-item3.jpg" class="card-img-top p-4" alt="iPhone 15">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">IPHONE 15</h6>
+                                        <p class="card-text text-muted mb-1">$1500</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/product-item5.jpg" class="card-img-top p-4" alt="Samsung">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">SAMSUNG S23</h6>
+                                        <p class="card-text text-muted mb-1">$1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/product-item3.jpg" class="card-img-top p-4" alt="Pixel">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">GOOGLE PIXEL</h6>
+                                        <p class="card-text text-muted mb-1">$800</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carousel-indicators position-static mt-4">
+                    <button type="button" data-bs-target="#mobileProductsSlider" data-bs-slide-to="0"
+                        class="active bg-dark rounded-circle p-2 mx-1"></button>
+                    <button type="button" data-bs-target="#mobileProductsSlider" data-bs-slide-to="1"
+                        class="bg-dark rounded-circle p-2 mx-1"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- smart watches -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="fw-bold mb-4">SMART WATCHES</h3>
+            <div id="smartWatchesSlider" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/product-item6.jpg" class="card-img-top p-4" alt="Pink Watch">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">PINK WATCH</h6>
+                                        <p class="card-text text-muted mb-1">$450</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/product-item8.jpg" class="card-img-top p-4" alt="Heavy Watch">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">HEAVY WATCH</h6>
+                                        <p class="card-text text-muted mb-1">$550</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/post-image.jpg" class="card-img-top p-4" alt="Spotted Watch">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">SPOTTED WATCH</h6>
+                                        <p class="card-text text-muted mb-1">$750</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/bla.jpg" class="card-img-top p-4" alt="Black Watch">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">BLACK WATCH</h6>
+                                        <p class="card-text text-muted mb-1">$450</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-center justify-content-center">
+                                <a href="#" class="text-dark fw-bold text-decoration-none">SEE ALL</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
+                            <div class="col">
+                                <div class="card border-0 text-center">
+                                    <img src="./img/product-item9.jpg" class="card-img-top p-4" alt="Blue Watch">
+                                    <div class="card-body p-0 pt-3">
+                                        <h6 class="card-title fw-bold">BLUE WATCH</h6>
+                                        <p class="card-text text-muted mb-1">$600</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-center justify-content-center">
+                                <a href="#" class="text-dark fw-bold text-decoration-none">VIEW MORE</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carousel-indicators position-static mt-4">
+                    <button type="button" data-bs-target="#smartWatchesSlider" data-bs-slide-to="0"
+                        class="active bg-dark rounded-circle p-2 mx-1"></button>
+                    <button type="button" data-bs-target="#smartWatchesSlider" data-bs-slide-to="1"
+                        class="bg-dark rounded-circle p-2 mx-1"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 new-year-sale">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-light">
+                        10% off<br>
+                        NEW YEAR SALE
+                    </h2>
+                    <a href="#" class="btn btn-dark btn-lg mt-3 px-4">SHOP NOW</a>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-end mt-4 mt-lg-0">
+                    <img src="./img/sale-image.png" class="img-fluid" style="max-width: 450px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- latest posts -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="fw-bold mb-4">LATEST POSTS</h3>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="./img/single-post.jpg" class="card-img-top post-card-img" alt="5 Best Smart Gadgets">
+                        <div class="card-body p-0 pt-3">
+                            <p class="text-muted small mb-1">MARCH 14, 2023</p>
+                            <h6 class="fw-bold"><a href="#" class="text-dark text-decoration-none">5 BEST SMART GADGETS
+                                    IN 2023</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="./img/insta-item4.jpg" class="card-img-top post-card-img" alt="Technology Trends">
+                        <div class="card-body p-0 pt-3">
+                            <p class="text-muted small mb-1">MARCH 14, 2023</p>
+                            <h6 class="fw-bold"><a href="#" class="text-dark text-decoration-none">TECHNOLOGY TRENDS YOU
+                                    WON'T GET</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="./img/post-item3.jpg" class="card-img-top post-card-img" alt="Amazing Camera">
+                        <div class="card-body p-0 pt-3">
+                            <p class="text-muted small mb-1">MARCH 14, 2023</p>
+                            <h6 class="fw-bold"><a href="#" class="text-dark text-decoration-none">YOU CAN DO IT ALL
+                                    CAMERA IN THE WORLD</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center justify-content-center">
+                    <a href="#" class="text-dark fw-bold text-decoration-none">READ BLOG</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div id="testiSlider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner text-center">
+
+                    <div class="carousel-item active">
+                        <h1 class="display-1 text-muted" style="opacity:0.15;">‟ ”</h1>
+                        <p class="fs-4 w-75 mx-auto">
+                            Tempus oncu enim pellen tesque este pretium in neque, elit morbi sagittis lorem habi mattis
+                            Pellen tesque pretium feugiat vel morbi suspen dise sagittis lorem habi tasse morbi.
+                        </p>
+                        <div class="mt-3">
+                            <i class="bi bi-star-fill text-info"></i>
+                            <i class="bi bi-star-fill text-info"></i>
+                            <i class="bi bi-star-fill text-info"></i>
+                            <i class="bi bi-star-fill text-info"></i>
+                            <i class="bi bi-star text-info"></i>
+                        </div>
+                        <h6 class="mt-2">EMMA CHAMBERLIN</h6>
+                    </div>
+
+                    <div class="carousel-item">
+                        <h1 class="display-1 text-muted" style="opacity:0.15;">‟ ”</h1>
+                        <p class="fs-4 w-75 mx-auto">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, explicabo repellat. Ipsum
+                            dolorem facere doloremque.
+                        </p>
+                        <div class="mt-3">
+                            <i class="bi bi-star-fill text-info"></i>
+                            <i class="bi bi-star-fill text-info"></i>
+                            <i class="bi bi-star-fill text-info"></i>
+                            <i class="bi bi-star text-info"></i>
+                            <i class="bi bi-star text-info"></i>
+                        </div>
+                        <h6 class="mt-2">JAMES HUNTER</h6>
+                    </div>
+
+                    <div class="carousel-item">
+                        <h1 class="display-1 text-muted" style="opacity:0.15;">‟ ”</h1>
+                        <p class="fs-4 w-75 mx-auto">
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                            egestas.
+                        </p>
+                        <div class="mt-3">
+                            <i class="bi bi-star-fill text-info"></i>
+                            <i class="bi bi-star-fill text-info"></i>
+                            <i class="bi bi-star-fill text-info"></i>
+                            <i class="bi bi-star-fill text-info"></i>
+                            <i class="bi bi-star-fill text-info"></i>
+                        </div>
+                        <h6 class="mt-2">SARAH JENNINGS</h6>
+                    </div>
+
+                </div> <button class="carousel-control-prev" type="button" data-bs-target="#testiSlider"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" style="filter: invert(70%);"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testiSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" style="filter: invert(70%);"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- subscribe -->
+    <section class="py-5" style="background:#1d1f23;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-white">
+                    <h3 class="fw-bold">SUBSCRIBE US NOW</h3>
+                    <p class="mb-0 text-muted">Get latest news, updates and deals directly mailed to your inbox.</p>
+                </div>
+
+                <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="input-group">
+                        <input type="email" class="form-control py-3" placeholder="Your email address here"
+                            style="background: transparent; border-color: #555; color: white;">
+                        <button class="btn px-4" style="background:#76aaba; color:white;">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our insta -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h5 class="fw-bold mb-4">SHOP OUR INSTA</h5>
+            <div class="row row-cols-2 row-cols-md-6 g-2">
+                <div class="col">
+                    <img src="./img/insta-item1.jpg" class="img-fluid" alt="Insta Image 1">
+                </div>
+                <div class="col">
+                    <img src="./img/insta-item2.jpg" class="img-fluid" alt="Insta Image 2">
+                </div>
+                <div class="col">
+                    <img src="./img/insta-item3.jpg" class="img-fluid" alt="Insta Image 3">
+                </div>
+                <div class="col">
+                    <img src="./img/insta-item4.jpg" class="img-fluid" alt="Insta Image 4">
+                </div>
+                <div class="col">
+                    <img src="./img/insta-item5.jpg" class="img-fluid" alt="Insta Image 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">MiniStore<span class="text-primary">.</span></h5>
+                    <p class="text-muted small">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque ad.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">QUICK LINKS</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">About</a></li>
+                        <li><a href="#" class="footer-link">Shop</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">HELP & SUPPORT</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Shipping Info</a></li>
+                        <li><a href="#" class="footer-link">Returns</a></li>
+                        <li><a href="#" class="footer-link">How to Order</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">CONTACT US</h6>
+                    <p class="text-muted small mb-1">123 Main Street, New York</p>
+                    <p class="text-muted small mb-1">Email: info@ministore.com</p>
+                    <p class="text-muted small mb-1">Phone: +01 234 567 890</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center text-muted small">
+                © 2023 MiniStore. All rights reserved. Design by Me.
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
